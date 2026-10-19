@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-
 <html lang="sv">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#102026" name="theme-color"/>
-<meta content="En alldeles särskild 72-årspresent till världens bästa morfar." name="description"/>
-<title>Grattis på 72-årsdagen, morfar! 🎁</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102026" />
+  <meta name="description" content="En alldeles särskild 72-årspresent till världens bästa morfar." />
+  <title>Grattis på 72-årsdagen, morfar! 🎁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
     :root{
-      --bg:#0e171c;
-      --bg2:#15272d;
-      --panel:#1a2b31cc;
-      --panel-solid:#1b2d34;
       --gold:#efc97a;
       --gold2:#d8a24c;
       --cream:#fff6e4;
       --muted:#c8d4d1;
-      --soft:#90a6a7;
       --line:#efd1963b;
-      --green:#244344;
       --shadow:0 24px 70px rgba(0,0,0,.28);
       --radius:28px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;color:var(--cream);font-family:'DM Sans',Arial,sans-serif;background:linear-gradient(180deg,#132228 0%,#0d161b 100%);overflow-x:hidden}
-    img{max-width:100%;display:block}
     button{font:inherit}
     .backdrop{position:fixed;inset:0;z-index:-2;background:
       radial-gradient(circle at 15% 10%,rgba(239,201,122,.12),transparent 28%),
@@ -42,42 +34,15 @@
     .brand{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--gold)}
     .chip{border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:12px;color:#ead8ac;background:rgba(255,255,255,.03)}
 
-    .hero{min-height:min(760px,92svh);display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:38px;padding:38px 0 84px}
+    .hero{min-height:min(720px,92svh);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 0 74px}
+    .hero-inner{max-width:760px}
     .eyebrow{text-transform:uppercase;letter-spacing:.34em;color:var(--gold);font-size:12px;font-weight:800}
-    h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(48px,8vw,92px);line-height:1.02;letter-spacing:-.05em;margin:18px 0 18px}
+    h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(50px,8vw,94px);line-height:1.02;letter-spacing:-.05em;margin:18px 0 18px}
     h1 em{color:var(--gold);font-style:normal}
-    .lead{font-size:clamp(16px,1.9vw,20px);line-height:1.8;color:var(--muted);max-width:620px;margin:0 0 28px}
+    .lead{font-size:clamp(17px,2vw,21px);line-height:1.8;color:var(--muted);max-width:640px;margin:0 auto 28px}
     .goldbutton{border:0;border-radius:999px;cursor:pointer;background:linear-gradient(120deg,#ffeab6,#e8b25b);color:#27312e;font-weight:800;padding:17px 30px;box-shadow:0 14px 44px rgba(239,187,99,.38);transition:transform .2s, box-shadow .2s}
     .goldbutton:hover{transform:translateY(-2px);box-shadow:0 16px 52px rgba(239,187,99,.46)}
     .subhint{font-size:13px;color:#a7b6b4;margin-top:14px}
-
-    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .photo-card,.photo-wide{position:relative;overflow:hidden;border-radius:24px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
-    .photo-card{aspect-ratio:4/5;background:linear-gradient(150deg,#33484b 0%,#1f3135 46%,#172429 100%)}
-    .photo-wide{grid-column:1/-1;min-height:170px;background:linear-gradient(135deg,#a17a44 0%,#513620 35%,#27373d 100%)}
-    .art-overlay{position:absolute;inset:0;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.15) 45%,rgba(6,10,12,.7) 100%)}
-    .mini-tag{align-self:flex-start;padding:8px 12px;border-radius:999px;background:rgba(255,248,224,.14);backdrop-filter: blur(6px);font-size:11px;font-weight:700;letter-spacing:.06em;color:#ffecbe;margin-bottom:auto}
-    .photo-title{font-family:'Playfair Display',Georgia,serif;font-size:28px;line-height:1.05;margin:0 0 4px}
-    .photo-desc{font-size:14px;color:#d7e1dc;line-height:1.45}
-    .music-visual,.hotel-visual,.varna-visual,.artist-visual{position:absolute;inset:0}
-    .music-visual{background:
-      radial-gradient(circle at 24% 22%,rgba(255,234,182,.4),transparent 18%),
-      radial-gradient(circle at 73% 28%,rgba(255,255,255,.13),transparent 16%),
-      linear-gradient(180deg,rgba(255,255,255,.06),transparent 30%),
-      linear-gradient(135deg,#6f4d2f 0%,#2b3438 35%,#17242a 100%)}
-    .music-visual::after{content:'♪ ♫';position:absolute;right:18px;top:12px;font-size:42px;color:rgba(255,235,196,.44);letter-spacing:6px}
-    .hotel-visual{background:
-      radial-gradient(circle at 72% 22%,rgba(255,245,225,.28),transparent 22%),
-      linear-gradient(135deg,#d6b06a 0%,#8f6b3e 36%,#24373e 100%)}
-    .hotel-visual::before{content:'🏨';position:absolute;right:18px;top:18px;font-size:42px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.22))}
-    .varna-visual{background:
-      radial-gradient(circle at 22% 22%,rgba(239,201,122,.24),transparent 18%),
-      linear-gradient(135deg,#234149 0%,#1b2d34 55%,#101920 100%)}
-    .varna-visual::before{content:'📍';position:absolute;right:18px;top:16px;font-size:40px}
-    .artist-visual{background:
-      radial-gradient(circle at 50% 20%,rgba(255,240,214,.16),transparent 28%),
-      linear-gradient(140deg,#3a2d25 0%,#2b3941 45%,#18262d 100%)}
-    .artist-visual::before{content:'🎤';position:absolute;right:18px;top:14px;font-size:40px}
 
     .surprise-shell{padding-bottom:80px}
     .section-head{text-align:center;margin:0 auto 32px;max-width:760px}
@@ -85,43 +50,47 @@
     .section-head h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(36px,5.2vw,66px);line-height:1.08;letter-spacing:-.04em;margin:12px 0}
     .section-head p{margin:0;color:#d1ddd8;line-height:1.75;font-size:17px}
 
-    .reveal-zone{max-width:920px;margin:0 auto}
+    .reveal-zone{max-width:940px;margin:0 auto}
     .step-card{display:none;opacity:0;transform:translateY(18px);transition:opacity .55s ease, transform .55s ease;position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));backdrop-filter: blur(6px);box-shadow:var(--shadow);margin:0 0 20px}
     .step-card.visible{display:block}
     .step-card.show{opacity:1;transform:none}
-    .step-inner{display:grid;grid-template-columns:1.04fr .96fr;min-height:300px}
+    .step-inner{display:grid;grid-template-columns:1fr 1fr;min-height:340px}
     .step-copy{padding:34px;display:flex;flex-direction:column;justify-content:center}
     .step-index{display:inline-flex;align-items:center;gap:10px;font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:#f2ddb0;font-weight:800;margin-bottom:14px}
     .step-index::before{content:'';width:34px;height:1px;background:rgba(255,238,204,.56)}
     .step-copy h3{font-family:'Playfair Display',Georgia,serif;font-size:clamp(30px,4vw,48px);line-height:1.1;margin:0 0 14px}
-    .step-copy p{margin:0;color:var(--muted);line-height:1.85;font-size:17px}
+    .step-copy p{margin:0;color:var(--muted);line-height:1.8;font-size:17px}
     .fact-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
     .fact{padding:11px 14px;border:1px solid rgba(255,232,189,.24);border-radius:999px;background:rgba(255,248,224,.04);font-size:13px;color:#f6e7bf}
-    .step-visual{position:relative;min-height:270px}
+    .step-visual{position:relative;min-height:320px;background-size:cover;background-position:center}
+    .step-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.28))}
 
-    .poster{padding:22px;border-radius:26px;background:linear-gradient(135deg,#253d43 0%,#1a2b31 100%);border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
-    .poster-box{border-radius:22px;overflow:hidden;position:relative;background:linear-gradient(135deg,#b88a52 0%,#55381f 28%,#24343a 100%);min-height:340px;border:1px solid rgba(255,255,255,.08)}
-    .poster-box::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent 30%,rgba(0,0,0,.36) 100%)}
+    .img-together{background-image:url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80')}
+    .img-varnamo{background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80')}
+    .img-hotel{background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80')}
+
+    .poster-wrap{padding:24px}
+    .poster{border-radius:26px;overflow:hidden;position:relative;min-height:360px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);background-image:url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center}
+    .poster::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,13,.15),rgba(7,11,13,.72))}
     .poster-content{position:relative;z-index:2;padding:28px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
     .poster-top{font-size:12px;text-transform:uppercase;letter-spacing:.3em;color:#ffebbd;font-weight:800}
     .poster-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(34px,4vw,54px);line-height:1;margin:10px 0 10px}
     .poster-date{display:inline-flex;align-self:flex-start;padding:11px 14px;border-radius:999px;background:rgba(255,248,224,.16);backdrop-filter:blur(6px);font-size:14px;font-weight:800;color:#fff1cd}
     .poster-lineup{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
     .poster-name{padding:14px;border-radius:18px;background:rgba(13,19,22,.34);border:1px solid rgba(255,255,255,.08);font-weight:700;color:#fff7e7}
-    .poster-music{position:absolute;right:20px;bottom:16px;font-size:64px;color:rgba(255,240,214,.26)}
 
-    .artist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+    .artist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:0 24px 26px}
     .artist-card{border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#273a40 0%,#1a2c32 100%);border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
-    .artist-photo{aspect-ratio:4/3;position:relative;overflow:hidden}
-    .artist-photo::before{content:'';position:absolute;inset:0;background:
-      radial-gradient(circle at 50% 28%,rgba(255,255,255,.18),transparent 19%),
-      radial-gradient(circle at 50% 22%,rgba(255,248,224,.08),transparent 33%),
-      linear-gradient(135deg,#8a633b 0%,#364950 42%,#1d2c32 100%)}
-    .artist-photo::after{content:'🎵';position:absolute;right:16px;top:12px;font-size:32px;color:rgba(255,244,218,.56)}
+    .artist-photo{aspect-ratio:4/3;position:relative;overflow:hidden;background-size:cover;background-position:center}
+    .artist-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.36))}
     .artist-caption{padding:18px 18px 20px}
     .artist-caption strong{display:block;font-size:20px;margin-bottom:6px}
     .artist-caption span{display:block;color:#c5d3d0;line-height:1.55;font-size:14px}
-    .artist-initials{position:absolute;left:18px;bottom:16px;font-family:'Playfair Display',Georgia,serif;font-size:34px;color:#fff8e8;text-shadow:0 10px 18px rgba(0,0,0,.3)}
+    .artist-initials{position:absolute;left:18px;bottom:16px;font-family:'Playfair Display',Georgia,serif;font-size:34px;color:#fff8e8;text-shadow:0 10px 18px rgba(0,0,0,.3);z-index:1}
+    .lasse{background-image:url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80')}
+    .emil{background-image:url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=900&q=80')}
+    .helene{background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80')}
+    .christina{background-image:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=80')}
 
     .actions{display:flex;justify-content:center;margin:28px 0 6px}
     #nextStep{display:none}
@@ -137,10 +106,9 @@
     @keyframes fall{to{transform:translate(var(--drift),110vh) rotate(700deg);opacity:0}}
 
     @media (max-width:860px){
-      .hero{grid-template-columns:1fr;gap:26px;min-height:auto;padding:24px 0 56px}
-      .hero-grid{max-width:620px;width:100%;margin:0 auto}
       .step-inner{grid-template-columns:1fr}
       .artist-grid{grid-template-columns:1fr}
+      .step-visual{min-height:260px}
     }
     @media (max-width:640px){
       .wrap{padding:0 16px}
@@ -148,197 +116,161 @@
       .chip{font-size:11px;padding:8px 12px}
       h1{font-size:clamp(46px,13vw,68px)}
       .lead{font-size:16px}
-      .photo-wide{min-height:154px}
       .step-copy{padding:26px 20px}
       .step-copy p{font-size:16px}
       .poster-lineup{grid-template-columns:1fr}
+      .artist-grid{padding:0 16px 20px}
       .closing p{font-size:17px}
       .goldbutton{width:100%;justify-content:center}
     }
-    @media (prefers-reduced-motion:reduce){
-      *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-    }
-  
-#step3 > .artist-grid{padding:0 24px 26px;grid-template-columns:repeat(2,minmax(0,1fr))} #step3 .step-inner{align-items:center} @media(max-width:640px){#step3 > .artist-grid{grid-template-columns:1fr;padding:0 16px 20px}}
-</style>
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
 </head>
 <body>
-<div class="backdrop"></div>
-<div class="grain"></div>
-<div class="wrap">
-<header class="top">
-<div class="brand">En present med kärlek</div>
-<div class="chip">Till världens bästa morfar ❤️</div>
-</header>
-<main>
-<section class="hero">
-<div>
-<div class="eyebrow">72-årspresent</div>
-<h1>Grattis på<br/><em>72-årsdagen,</em><br/>morfar!</h1>
-<p class="lead">Du är min bästaste vän i hela världen, morfar! ❤️ Nu har jag en överraskning till dig.</p>
-<button class="goldbutton" id="startReveal" type="button">Börja öppna presenten ✨</button>
-<div class="subhint">Tryck för att avslöja presenten</div>
-</div>
-<div aria-hidden="true" class="hero-grid">
-<article class="photo-card">
-<div class="music-visual"></div>
-<div class="art-overlay">
-<div class="mini-tag">Musik</div>
-<h2 class="photo-title">Musik &amp; glädje</h2>
-<div class="photo-desc">En kväll att minnas</div>
-</div>
-</article>
-<article class="photo-card">
-<div class="varna-visual"></div>
-<div class="art-overlay">
-<div class="mini-tag">Resa</div>
-<h2 class="photo-title">Värnamo väntar</h2>
-<div class="photo-desc">3 april 2027</div>
-</div>
-</article>
-<article class="photo-wide">
-<div class="hotel-visual"></div>
-<div class="art-overlay">
-<div class="mini-tag">Hotellnatt</div>
-<h2 class="photo-title">En hotellnatt</h2>
-<div class="photo-desc">Scandic Värnamo</div>
-</div>
-</article>
-</div>
-</section>
-<section class="surprise-shell">
-<div class="section-head">
-<div class="small">Öppna presenten steg för steg</div>
-<h2>Din present 🎁</h2>
-<p>En sak i taget!</p>
-</div>
-<div class="reveal-zone" id="revealZone">
-<article class="step-card" id="step1">
-<div class="step-inner">
-<div class="step-copy">
-<div class="step-index">Steg 1</div>
-<h3>Du, mormor och Simon. En dag tillsammans! ❤️</h3>
-<p>Jag ville hitta på något roligt med dig och mormor. Därför blir det en utflykt!</p>
+  <div class="backdrop"></div>
+  <div class="grain"></div>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">En present med kärlek</div>
+      <div class="chip">Till världens bästa morfar ❤️</div>
+    </header>
 
-</div>
-<div class="step-visual artist-visual"></div>
-</div>
-</article>
-<article class="step-card" id="step2">
-<div class="step-inner">
-<div class="step-copy">
-<div class="step-index">Steg 2</div>
-<h3>Vi ska till Värnamo</h3>
-<p><strong>3 april 2027</strong> åker vi till Värnamo!</p>
-<div class="fact-row">
-<div class="fact">📍 Värnamo</div>
-<div class="fact">📅 3 april</div>
-</div>
-</div>
-<div class="step-visual varna-visual"></div>
-</div>
-</article>
-<article class="step-card" id="step3">
-<div class="step-inner">
-<div class="step-copy">
-<div class="step-index">Steg 3</div>
-<h3>Svenska Topphits! 🎶</h3>
-<p>Vi ska gå på Svenska Topphits – med fyra härliga artister!</p>
-<div class="fact-row">
-<div class="fact">🎶 Svenska Topphits</div>
-<div class="fact">✨ Konsertkväll</div>
-</div>
-</div>
-<div class="step-visual">
-<div class="poster">
-<div class="poster-box">
-<div class="poster-content">
-<div>
-<div class="poster-top">Födelsedagspresent</div>
-<div class="poster-title">Svenska<br/>Topphits</div>
-<div class="poster-date">Lördagen den 3 april 2027</div>
-</div>
-<div class="poster-lineup">
-<div class="poster-name">Lasse Sigfridsson</div>
-<div class="poster-name">Emil Sigfridsson</div>
-<div class="poster-name">Helene Wish Persson</div>
-<div class="poster-name">Christina Lindberg</div>
-</div>
-</div>
-<div class="poster-music">♫</div>
-</div>
-</div>
-</div>
-</div>
-<div class="artist-grid">
-<article class="artist-card">
-<div class="artist-photo"><div class="artist-initials">LS</div></div>
-<div class="artist-caption">
-<strong>Lasse Sigfridsson</strong>
-<span>På scen i Värnamo</span>
-</div>
-</article>
-<article class="artist-card">
-<div class="artist-photo"><div class="artist-initials">ES</div></div>
-<div class="artist-caption">
-<strong>Emil Sigfridsson</strong>
-<span>På scen i Värnamo</span>
-</div>
-</article>
-<article class="artist-card">
-<div class="artist-photo"><div class="artist-initials">HP</div></div>
-<div class="artist-caption">
-<strong>Helene Wish Persson</strong>
-<span>På scen i Värnamo</span>
-</div>
-</article>
-<article class="artist-card">
-<div class="artist-photo"><div class="artist-initials">CL</div></div>
-<div class="artist-caption">
-<strong>Christina Lindberg</strong>
-<span>På scen i Värnamo</span>
-</div>
-</article>
-</div></article>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="eyebrow">72-årspresent</div>
+          <h1>Grattis på<br><em>72-årsdagen,</em><br>morfar!</h1>
+          <p class="lead">Du är min bästaste vän i hela världen, morfar! ❤️ Nu har jag en överraskning till dig.</p>
+          <button class="goldbutton" id="startReveal" type="button">Börja öppna presenten ✨</button>
+          <div class="subhint">Tryck för att avslöja presenten</div>
+        </div>
+      </section>
 
-<article class="step-card" id="step5">
-<div class="step-inner">
-<div class="step-copy">
-<div class="step-index">Steg 4</div>
-<h3>Vi sover på hotell! 🏨</h3>
-<p>Det ingår även <strong>en hotellnatt på Scandic i Värnamo!</strong></p>
-<div class="fact-row">
-<div class="fact">🏨 Scandic Värnamo</div>
-<div class="fact">🌙 En hotellnatt</div>
-</div>
-</div>
-<div class="step-visual hotel-visual"></div>
-</div>
-</article>
-</div>
-<div class="actions">
-<button class="goldbutton" id="nextStep" type="button">Avslöja nästa 🎁</button>
-</div>
-<section class="closing step-card" id="finalMessage">
-<div class="small">Hela presenten är nu avslöjad</div>
-<h3>Grattis på 72-årsdagen! ❤️</h3>
-<p>
-<strong>3 april 2027:</strong> Svenska Topphits i Värnamo och en natt på Scandic – med dig, mormor och mig!
-          </p>
-<p>Du är min bästaste vän i hela världen! ❤️</p><div class="signature">Med massor av kärlek,<br/>Simon ❤️</div>
-</section>
-</section>
-</main>
-<footer>Gjord med kärlek, bara för dig ♥</footer>
-</div>
-<script>
+      <section class="surprise-shell">
+        <div class="section-head">
+          <div class="small">Öppna presenten steg för steg</div>
+          <h2>Din present 🎁</h2>
+          <p>En sak i taget!</p>
+        </div>
+
+        <div class="reveal-zone">
+          <article class="step-card" id="step1">
+            <div class="step-inner">
+              <div class="step-copy">
+                <div class="step-index">Steg 1</div>
+                <h3>Du, mormor och Simon. En dag tillsammans! ❤️</h3>
+                <p>Jag ville hitta på något roligt med dig och mormor. Därför blir det en utflykt!</p>
+              </div>
+              <div class="step-visual img-together"></div>
+            </div>
+          </article>
+
+          <article class="step-card" id="step2">
+            <div class="step-inner">
+              <div class="step-copy">
+                <div class="step-index">Steg 2</div>
+                <h3>Vi ska till Värnamo</h3>
+                <p><strong>3 april 2027</strong> åker vi till Värnamo!</p>
+                <div class="fact-row">
+                  <div class="fact">📍 Värnamo</div>
+                  <div class="fact">📅 3 april 2027</div>
+                </div>
+              </div>
+              <div class="step-visual img-varnamo"></div>
+            </div>
+          </article>
+
+          <article class="step-card" id="step3">
+            <div class="step-inner">
+              <div class="step-copy">
+                <div class="step-index">Steg 3</div>
+                <h3>Svenska Topphits! 🎶</h3>
+                <p>Vi ska gå på Svenska Topphits med <strong>Lasse Sigfridsson, Emil Sigfridsson, Helene Wish Persson och Christina Lindberg</strong>.</p>
+                <div class="fact-row">
+                  <div class="fact">🎶 Svenska Topphits</div>
+                  <div class="fact">🎤 4 artister</div>
+                </div>
+              </div>
+              <div class="poster-wrap">
+                <div class="poster">
+                  <div class="poster-content">
+                    <div>
+                      <div class="poster-top">Födelsedagspresent</div>
+                      <div class="poster-title">Svenska<br>Topphits</div>
+                      <div class="poster-date">Lördagen den 3 april 2027</div>
+                    </div>
+                    <div class="poster-lineup">
+                      <div class="poster-name">Lasse Sigfridsson</div>
+                      <div class="poster-name">Emil Sigfridsson</div>
+                      <div class="poster-name">Helene Wish Persson</div>
+                      <div class="poster-name">Christina Lindberg</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="artist-grid">
+              <article class="artist-card">
+                <div class="artist-photo lasse"><div class="artist-initials">LS</div></div>
+                <div class="artist-caption"><strong>Lasse Sigfridsson</strong><span>På scen i Värnamo</span></div>
+              </article>
+              <article class="artist-card">
+                <div class="artist-photo emil"><div class="artist-initials">ES</div></div>
+                <div class="artist-caption"><strong>Emil Sigfridsson</strong><span>På scen i Värnamo</span></div>
+              </article>
+              <article class="artist-card">
+                <div class="artist-photo helene"><div class="artist-initials">HP</div></div>
+                <div class="artist-caption"><strong>Helene Wish Persson</strong><span>På scen i Värnamo</span></div>
+              </article>
+              <article class="artist-card">
+                <div class="artist-photo christina"><div class="artist-initials">CL</div></div>
+                <div class="artist-caption"><strong>Christina Lindberg</strong><span>På scen i Värnamo</span></div>
+              </article>
+            </div>
+          </article>
+
+          <article class="step-card" id="step4">
+            <div class="step-inner">
+              <div class="step-copy">
+                <div class="step-index">Steg 4</div>
+                <h3>Vi sover på hotell! 🏨</h3>
+                <p>Det ingår även <strong>en hotellnatt på Scandic i Värnamo</strong>!</p>
+                <div class="fact-row">
+                  <div class="fact">🏨 Scandic Värnamo</div>
+                  <div class="fact">🌙 En hotellnatt</div>
+                </div>
+              </div>
+              <div class="step-visual img-hotel"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="actions">
+          <button class="goldbutton" id="nextStep" type="button">Avslöja nästa 🎁</button>
+        </div>
+
+        <section class="closing step-card" id="finalMessage">
+          <div class="small">Hela presenten är nu avslöjad</div>
+          <h3>Grattis på 72-årsdagen! ❤️</h3>
+          <p><strong>3 april 2027:</strong> Svenska Topphits i Värnamo och en natt på Scandic – med dig, mormor och mig!</p>
+          <p>Du är min bästaste vän i hela världen! ❤️</p>
+          <div class="signature">Med massor av kärlek,<br>Simon ❤️</div>
+        </section>
+      </section>
+    </main>
+
+    <footer>Gjord med kärlek, bara för dig ♥</footer>
+  </div>
+
+  <script>
     const startBtn = document.getElementById('startReveal');
     const nextBtn = document.getElementById('nextStep');
     const steps = [
       document.getElementById('step1'),
       document.getElementById('step2'),
       document.getElementById('step3'),
-      document.getElementById('step5'),
+      document.getElementById('step4'),
       document.getElementById('finalMessage')
     ];
     let current = 0;
@@ -367,15 +299,10 @@
       requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('show')));
       setTimeout(()=>el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'}), 140);
       current++;
-
       if(current < steps.length){
         nextBtn.classList.add('visible');
-        if(current === steps.length - 1){
-          nextBtn.textContent = 'Visa sista överraskningen ❤️';
-        }else{
-          nextBtn.textContent = 'Avslöja nästa 🎁';
-        }
-      }else{
+        nextBtn.textContent = current === steps.length - 1 ? 'Visa sista överraskningen ❤️' : 'Avslöja nästa 🎁';
+      } else {
         nextBtn.style.display = 'none';
       }
     }
